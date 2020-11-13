@@ -36,7 +36,7 @@ if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
   true
 else
   echo -e "\033[1;31m ERRO CRITICO\033[0m"
-  rm $HOME/install.sh
+  rm $HOME/install
   exit
 fi
 apt-get install php5-curl > /dev/null 2>&1
