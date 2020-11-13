@@ -35,7 +35,6 @@ apt-get install libssh2-1-dev libssh2-php -y > /dev/null 2>&1
 if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
   true
 else
-#  clear
   echo -e "\033[1;31m ERRO CRITICO\033[0m"
   rm $HOME/install.sh
   exit
