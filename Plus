@@ -45,7 +45,7 @@ echo -e "\033[1;31m════════════════════�
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "SELAMAT DATANG DI SCRIPT SSH PLUS" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "             \033[1;31mPERHATIAN! \033[1;33mIRA SKRIP INI !\033[0m"
+echo -e "             \033[1;31mPERHATIAN! \033[1;33mTENTANG SKRIP INI !\033[0m"
 echo ""
 echo -e "\033[1;31m• \033[1;33mMEMASANG SKRIP SEBAGAI ALAT\033[0m" 
 echo -e "\033[1;33m  UNTUK MANAJEMEN JARINGAN, SISTEM DAN PENGGUNA\033[0m"
@@ -75,7 +75,7 @@ echo ""
     echo ""
 	echo -e "                 \033[1;33m• \033[1;31mPERHATIAN \033[1;33m• \033[0m"
 	echo ""
-    echo -e "\033[1;33mDatabase Pengguna \033[1;32m(usuarios.db) \033[1;33mFoi" 
+    echo -e "\033[1;33mDatabase Pengguna \033[1;32m(usuarios.db) \033[1;33mlama" 
     echo -e "Ditemukan! Apakah Anda ingin mempertahankan batas"
 	echo -e "koneksi simultan dari pengguna? Atau Apakah Anda Ingin"
     echo -e "buat database baru ?\033[0m"
@@ -89,12 +89,12 @@ echo ""
 }
 [[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " TUNGGU INSTALASI" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " TUNGGU SEDANG MENGINSTALL" ; tput sgr0
 echo ""
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mSISTEM PEMBARUAN \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mMEMPERBARUI SISTEM \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
 echo ""
-echo -e "    \033[1;33mPEMBARUAN SEDIKIT MEMAKAN WAKTU!\033[0m"
+echo -e "    \033[1;33mPEMBARUAN CUKUP MEMAKAN WAKTU!\033[0m"
 echo ""
 fun_attlist () {
     apt-get update -y
@@ -102,9 +102,9 @@ fun_attlist () {
 fun_bar 'fun_attlist'
 clear
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mMEMASANG PAKET \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mMEMASANG\033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "\033[1;33mBEBERAPA PAKET SANGAT DIPERLUKAN !\033[0m"
+echo -e "\033[1;33m BEBERAPA PAKET YANG DIPERLUKAN !\033[0m"
 echo ""
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
@@ -119,7 +119,7 @@ clear
 echo ""
 echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mMenyelesaikan Pemasangan \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "      \033[1;33mFUNGSI DAN DEFINISI LENGKAP! \033[0m"
+echo -e "      \033[1;33m PEMASANGAN BERHASIL! \033[0m"
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
