@@ -119,14 +119,18 @@ echo '10 * * * * root /usr/bin/php /var/www/html/pages/system/cron.servidor.php'
 echo '*/30 * * * * root /usr/bin/php /var/www/html/pages/system/cron.limpeza.php' >> /etc/crontab
 echo '*/1 * * * * root /bin/html.sh' >> /etc/crontab
 cd /bin
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/panel_v20/html.sh > /dev/null 2>&1 && chmod 777 html.sh && sed -i -e 's/\r$//' html.sh && ./html.sh
-/etc/init.d/cron reload > /dev/null 2>&1
-/etc/init.d/cron restart > /dev/null 2>&1
+# wget https://raw.githubusercontent.com/reinzlok/ScriptSSHPlus/master/Install/Panel_Web/panel_v20/html.sh > /dev/null 2>&1 && chmod 777 html.sh && sed -i -e 's/\r$//' html.sh && ./html.sh
+wget https://raw.githubusercontent.com/reinzlok/ScriptSSHPlus/master/Install/Panel_Web/panel_v20/html.sh && chmod 777 html.sh && sed -i -e 's/\r$//' html.sh && ./html.sh
+# /etc/init.d/cron reload > /dev/null 2>&1
+/etc/init.d/cron reload
+# /etc/init.d/cron restart > /dev/null 2>&1
+/etc/init.d/cron
 cd
 chmod 777 /var/www/html/admin/pages/servidor/ovpn
 chmod 777 /var/www/html/admin/pages/download
 chmod 777 /var/www/html/admin/pages/faturas/comprovantes
-service apache2 restart > /dev/null 2>&1
+# service apache2 restart > /dev/null 2>&1
+service apache2 restart
 clear
 echo -e "\033[1;32m PAINEL-SSH INSTALADO COM SUCESSO!"
 echo ""
