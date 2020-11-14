@@ -50,7 +50,7 @@ wget https://raw.githubusercontent.com/reinzlok/ScriptSSHPlus/master/Install/Pan
 ```
 ## PANEL SSHPLUS v20 (Installation Directa)
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ScriptSSHPlus/master/Install/Panel_Web/panel_v20/install; chmod +x install; ./install
+wget https://raw.githubusercontent.com/reinzlok/ScriptSSHPlus/master/Install/Panel_Web/panel_v20/install; chmod +x install; ./install
 ```
 
 -------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ScriptSSHPlus/mast
 
 ## Installation
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
+wget https://raw.githubusercontent.com/reinzlok/ScriptSSHPlus/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
 
 -------------------------------------------------------------------------------
 
