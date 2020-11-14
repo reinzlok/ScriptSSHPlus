@@ -15,13 +15,13 @@ echo " Inisialisasi penginstallan "
 # apt-get update -y > /dev/null 2>&1
 apt-get update
 # apt-get install cron curl unzip -y > /dev/null 2>&1
-apt-get install cron curl unzip
+apt-get install cron curl unzip -y
 # echo -e "\n\033[1;36mINSTALANDO O APACHE2 \033[1;33mAGUARDE...\033[0m"
 echo " MENGINSTALL APACHE2 "
 # apt-get install apache2 -y > /dev/null 2>&1
-apt-get install apache2
+apt-get install apache2 -y
 # apt-get install php7.0 libapache2-mod-php7.0 php7.0-mcrypt -y > /dev/null 2>&1
-apt-get install php7.0 libapache2-mod-php7.0 php7.0-mcrypt
+apt-get install php7.0 libapache2-mod-php7.0 php7.0-mcrypt -y
 # service apache2 restart > /dev/null 2>&1
 service apache2 restart
 # echo -e "\n\033[1;36mINSTALANDO O MySQL \033[1;33mAGUARDE...\033[0m"
@@ -29,7 +29,7 @@ echo " MENGINSTALL MYSQL "
 echo "debconf mysql-server/root_password password $senha" | debconf-set-selections
 echo "debconf mysql-server/root_password_again password $senha" | debconf-set-selections
 # apt-get install mysql-server -y > /dev/null 2>&1
-apt-get install mysql-server
+apt-get install mysql-server -y
 # mysql_install_db > /dev/null 2>&1
 mysql_install_db
 (echo $senha; echo n; echo y; echo y; echo y; echo y)|mysql_secure_installation > /dev/null 2>&1
@@ -41,14 +41,14 @@ echo "phpmyadmin phpmyadmin/mysql/admin-pass password $senha" | debconf-set-sele
 echo "phpmyadmin phpmyadmin/mysql/app-pass password $senha" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | debconf-set-selections
 # apt-get install phpmyadmin -y > /dev/null 2>&1
-apt-get install phpmyadmin
+apt-get install phpmyadmin -y
 # php7.0enmod mcrypt > /dev/null 2>&1
 php7.0enmod mcrypt
 # service apache2 restart > /dev/null 2>&1
 service apache2 restart
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 # apt-get install php-dev php-ssh2 -y > /dev/null 2>&1
-apt-get install php-dev php-ssh2
+apt-get install php-dev php-ssh2 -y
 if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
   true
 else
