@@ -40,7 +40,7 @@ clear
   rm $HOME/install
   exit
 fi
-apt-get install php5-curl > /dev/null 2>&1
+apt-get install php7.0-curl > /dev/null 2>&1
 service apache2 restart > /dev/null 2>&1
 clear
 echo ""
